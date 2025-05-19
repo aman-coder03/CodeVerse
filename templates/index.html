@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodeVerse</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>👾 Welcome to CodeVerse</h1>
+
+  <div>
+    <h2>🎤 Voice-to-Code</h2>
+    <input id="voiceInput" placeholder="Speak code..." />
+    <button onclick="sendVoice()">Convert to Code</button>
+    <pre id="codeOutput"></pre>
+  </div>
+
+  <div>
+    <h2>😅 Error Comedy</h2>
+    <select id="errorType">
+      <option value="loop">Loop Error</option>
+      <option value="syntax">Syntax Error</option>
+    </select>
+    <button onclick="getErrorResponse()">Get Funny Response</button>
+    <p id="funnyResponse"></p>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
